@@ -1,0 +1,106 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: rgba(15, 56, 15, 0.92);
+  font-family: var(--font-pixel);
+  color: var(--lcd-light);
+}
+
+.title {
+  font-size: clamp(16px, 4.5vw, 22px);
+  color: var(--lcd-light);
+  text-shadow: 0 0 12px rgba(155, 188, 15, 0.7);
+  letter-spacing: 3px;
+  animation: flicker 2.5s ease-in-out infinite;
+}
+
+.subtitle {
+  font-size: clamp(5px, 1.4vw, 7px);
+  color: var(--lcd-mid);
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 2.2;
+}
+
+.score {
+  font-size: clamp(10px, 2.8vw, 14px);
+  color: var(--lcd-light);
+}
+
+.scoreLabel {
+  font-size: clamp(5px, 1.4vw, 7px);
+  color: var(--lcd-mid);
+  text-align: center;
+}
+
+.divider {
+  width: 55%;
+  height: 1px;
+  background: var(--lcd-body);
+  opacity: 0.5;
+}
+
+/* Difficulty selector */
+.modeLabel {
+  font-size: clamp(5px, 1.3vw, 6px);
+  color: var(--lcd-body);
+  letter-spacing: 1px;
+}
+
+.modeRow {
+  display: flex;
+  gap: 8px;
+}
+
+.modeBtn {
+  font-family: var(--font-pixel);
+  font-size: clamp(5px, 1.3vw, 6px);
+  color: var(--lcd-body);
+  background: transparent;
+  border: 1px solid var(--lcd-body);
+  padding: 5px 8px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: color 0.1s, border-color 0.1s, background 0.1s;
+  border-radius: 1px;
+}
+
+.modeBtn:hover {
+  color: var(--lcd-light);
+  border-color: var(--lcd-light);
+}
+
+.modeBtnActive {
+  color: var(--lcd-dark);
+  background: var(--lcd-light);
+  border-color: var(--lcd-light);
+}
+
+.startBtn {
+  font-size: clamp(5px, 1.4vw, 7px);
+  color: var(--lcd-light);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@keyframes flicker {
+  0%, 88%, 100% { opacity: 1; }
+  90%           { opacity: 0.75; }
+  93%           { opacity: 1; }
+  96%           { opacity: 0.6; }
+}

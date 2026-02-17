@@ -1,0 +1,42 @@
+.screen {
+  width: var(--screen-size);
+  height: var(--screen-size);
+  background: var(--lcd-light);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+
+  box-shadow:
+    0 0 0 6px #1a1a1a,
+    0 0 0 8px #2a2a2a,
+    0 0 40px rgba(155, 188, 15, 0.15),
+    0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+/* Scanlines */
+.screen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 2px,
+    rgba(0, 0, 0, 0.04) 2px,
+    rgba(0, 0, 0, 0.04) 3px
+  );
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* Edge vignette */
+.screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.2) 100%);
+  pointer-events: none;
+  z-index: 21;
+}

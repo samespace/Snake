@@ -1,0 +1,35 @@
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 6px 3px;
+  background: var(--lcd-dark);
+  color: var(--lcd-light);
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 5;
+}
+
+.label {
+  opacity: 0.7;
+  font-size: 5px;
+  margin-bottom: 1px;
+}
+
+.value {
+  font-size: 7px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.item:last-child {
+  align-items: flex-end;
+}

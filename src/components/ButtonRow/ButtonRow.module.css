@@ -1,0 +1,168 @@
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 88%;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* D-pad */
+.dpad {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.dpadH,
+.dpadV {
+  position: absolute;
+  background: linear-gradient(180deg, var(--phone-light) 0%, var(--phone-mid) 100%);
+  border-radius: 3px;
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.1);
+}
+
+.dpadH {
+  width: 100%;
+  height: 33.33%;
+  top: 33.33%;
+}
+
+.dpadV {
+  width: 33.33%;
+  height: 100%;
+  left: 33.33%;
+}
+
+.dpadCenter {
+  position: absolute;
+  width: 33.33%;
+  height: 33.33%;
+  top: 33.33%;
+  left: 33.33%;
+  background: var(--phone-mid);
+  border-radius: 2px;
+  z-index: 1;
+}
+
+/* Arrows on d-pad arms */
+.dpadArrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+}
+
+.arrowUp {
+  border-bottom-color: var(--phone-acc);
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrowDown {
+  border-top-color: var(--phone-acc);
+  bottom: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrowLeft {
+  border-right-color: var(--phone-acc);
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrowRight {
+  border-left-color: var(--phone-acc);
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Side buttons */
+.sideButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.sideButton {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, var(--phone-light), var(--phone-dark));
+  box-shadow:
+    0 4px 8px rgba(0,0,0,0.6),
+    0 1px 0 rgba(255,255,255,0.08),
+    inset 0 -2px 4px rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  color: #555;
+}
+
+.sideButtonSmall {
+  width: 24px;
+  height: 24px;
+}
+
+/* Number grid */
+.numGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+}
+
+.numKey {
+  width: 24px;
+  height: 20px;
+  background: linear-gradient(180deg, var(--phone-light) 0%, var(--phone-mid) 100%);
+  border-radius: 3px;
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-pixel);
+  font-size: 6px;
+  color: #666;
+}
+
+.bottomSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 88%;
+}
+
+.menuRow {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.menuBtn {
+  flex: 1;
+  height: 16px;
+  background: linear-gradient(180deg, var(--phone-light) 0%, var(--phone-mid) 100%);
+  border-radius: 8px;
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.5),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+  min-width: 40px;
+}
+
+.menuBtnSmall {
+  min-width: 24px;
+  flex: 0;
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- LCD background -->
+  <rect width="32" height="32" fill="#9BBC0F"/>
+  <!-- Snake body pixels (dark green) -->
+  <rect x="4"  y="16" width="6" height="6" fill="#0F380F"/>
+  <rect x="10" y="16" width="6" height="6" fill="#306230"/>
+  <rect x="16" y="16" width="6" height="6" fill="#306230"/>
+  <rect x="16" y="10" width="6" height="6" fill="#306230"/>
+  <rect x="16" y="4"  width="6" height="6" fill="#306230"/>
+  <!-- Food dot -->
+  <rect x="24" y="4"  width="4" height="4" fill="#0F380F"/>
+</svg>

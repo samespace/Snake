@@ -1,0 +1,20 @@
+.cell {
+  background: var(--lcd-light);
+}
+
+.snakeHead {
+  background: var(--lcd-dark);
+  border-radius: 1px;
+}
+
+.snakeBody {
+  background: var(--lcd-body);
+}
+
+.food {
+  background: var(--lcd-dark);
+  /* Pixel-art food: small square inset */
+  box-shadow:
+    inset 2px 2px 0 var(--lcd-light),
+    inset -2px -2px 0 var(--lcd-light);
+}
