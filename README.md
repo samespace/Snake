@@ -1,4 +1,4 @@
-# Snake
+# Snake Test
 
 Nokia-style Snake game built with React + TypeScript + Vite.
 
